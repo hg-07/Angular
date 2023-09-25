@@ -1,0 +1,73 @@
+.card.booking-card {
+    background-color: #ffffff;
+    max-width: 300px;
+    margin: 25px 15px 25px 15px;
+    transition: transform 0.2s ease;
+}
+
+.card.booking-card:hover {
+    transform: scale(1.1);
+}
+
+.card.booking-card .fa {
+    color: #f7aa00;
+}
+
+.card.booking-card .card-body .card-text {
+    color: #111111;
+}
+
+.card.booking-card .card-body hr {
+    border-top: 1px solid #f7aa00;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+.card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* number of lines to show */
+            line-clamp: 6; 
+    -webkit-box-orient: vertical;
+ }
+ .card-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+ }
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+
+    del {
+        color: rgba(rgb(150, 150, 150), 0.5);
+        text-decoration: none;
+        position: relative;
+
+        &:before {
+            content: " ";
+            display: block;
+            width: 100%;
+            border-top: 2px solid rgba(rgb(53, 53, 53), 0.8);
+            height: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: rotate(-7deg);
+        }
+    }
+
+    ins {
+        display: inline;
+        color: green;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 1em 1em 1em .5em;
+    }
+    
+}

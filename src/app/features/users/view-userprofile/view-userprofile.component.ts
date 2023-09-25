@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CreateUserComponent} from '../create-user/create-user.component'
+
+import {UserService} from 'src/app/shared/services/user.service'
+import {user} from 'src/app/core/models/user.model'
 
 @Component({
   selector: 'app-view-userprofile',
@@ -9,16 +11,22 @@ import {CreateUserComponent} from '../create-user/create-user.component'
 export class ViewUserprofileComponent implements OnInit{
   
   changeProfile : boolean;
-  constructor(){
+  user = {} as user;
+  constructor(private userService:UserService){
     this.changeProfile = false;
   }
 
   ngOnInit(): void {
-    
+     this.getAPI();
   }
   changeProfileRedirect(){
-    console.log("hello");
+    
     this.changeProfile = true;
     
+  }
+  getAPI(){
+    this.userService.get().subscribe((data)=>{
+      this.user =data;
+    })
   }
 }

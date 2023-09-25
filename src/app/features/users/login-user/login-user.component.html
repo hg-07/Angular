@@ -1,0 +1,97 @@
+<div class="dropdown-menu dropdown-menu-end {{showclass}}">
+    <div class="px-4 py-3">
+        <form [formGroup]="phoneNumberForm" (ngSubmit)="getOTP()" novalidate>
+
+            <div *ngIf="!otpReceived">
+                <label for="phoneNumber"> <h5>Phone Number </h5> </label>
+                <input class="mobile" type="text" id="phoneNumber" formControlName="phoneNumber">
+            
+            <button type="submit" class="btn btn-primary">Request OTP</button>
+            
+            <div class="reg" >
+                <a href="register" >Register?</a>
+            </div>
+            </div>
+        </form>
+    
+    
+    
+        <form  [formGroup]="otpForm" (ngSubmit)="submitOTP()" novalidate>
+            <p *ngIf="otpReceived">
+    
+                       
+    
+                <label for="otp">OTP </label>
+                <input class="otp" type="text" id="otp" formControlName="OTP">
+            
+    
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+        </form>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form (ngSubmit)="getOTP()" >
+    <div *ngIf="otpReceived; else elseBlock">
+        <div>You will receive a OTP on this number {{mobilenumber}}</div>
+        <div class="form-group">
+            <label for="otp">Enter OTP</label>
+            <input maxlength='4' placeholder="    " type="text" class="form-control otp" id="otp">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+            <label class="form-check-label" for="dropdownCheck2">
+                Remember me
+            </label>
+        </div>
+        <button type="submit" (ngSubmit)="submitOTP()" class="btn btn-primary">submit</button>
+    </div>
+    <ng-template #elseBlock>
+        <div class="form-group">
+            <label for="mobilenumber"> <h5>Mobile Number</h5> </label>
+            <input maxlength='10' placeholder="9999999999" type="text" class="form-control mobile" id="mobilenumber">
+            <label for="mobilenumberdesc">You will receive an OTP on this number</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+            <label class="form-check-label" for="dropdownCheck2">
+                Remember me
+            </label>
+        </div>
+        <button type="submit" (ngSubmit)="getOTP()" class="btn btn-primary">Get OTP</button>
+    </ng-template>
+
+
+</form> -->

@@ -1,0 +1,47 @@
+.container {
+
+}
+.box{
+    margin:10px;
+    
+    width: 100%;
+    height:400px;
+    
+
+    .text-box{
+        display: block;
+        width:  70%;
+        height: 100%;
+        color: aliceblue;
+        font-size: 1.5vw;
+        margin: 10px;
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        
+    }
+
+}
+.bluetext {
+    font-size: 2.5vw;
+    font-weight: 300;
+    
+    color: #0099CC;
+}
+.graytext{
+font-size: 1.5vw;
+font-weight: 300;
+
+color: #666666;
+}
+
+
+.rowstyle {
+    margin: 5% 15%;
+    border-bottom: #CCCCCC 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+img{
+    width:100%
+}

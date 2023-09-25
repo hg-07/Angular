@@ -1,0 +1,52 @@
+<!-- Card -->
+<div class="card booking-card">
+
+    <!-- Card image -->
+    <div class="view overlay">
+        <img class="card-img-top" src={{course.imgurl}} alt="Card image cap">
+        <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
+
+    <!-- Card content -->
+    <div class="card-body">
+
+        <!-- Title -->
+        <h4 class="card-title font-weight-bold"><a>{{course.title}}</a></h4>
+        <!-- Data -->
+        <div class="rating">
+            <ul class="list-unstyled list-inline rating">
+                <li class="list-inline-item mr-0"><i class="fa fa-star"> </i></li>
+                <li class="list-inline-item mr-0"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item mr-0"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item mr-0"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+            </ul>
+            <p><i class="fa fa-comment "></i>{{course.ratings}}</p>
+        </div>
+        <!-- Text -->
+        <p class="card-text">he 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recen</p>
+        <hr class="my-4">
+        <div class="prices">
+            <div>
+                <del>
+                    <span class="amount">₹{{course.price}}</span>
+                </del>
+                <ins>
+                    <span class="amount">₹ {{course.discprice}}</span>
+                </ins>
+
+            </div>
+            <button type="button" class="btn btn-dark">Buy Now</button>
+        </div>
+
+    </div>
+
+
+
+</div>
+<!-- Card -->

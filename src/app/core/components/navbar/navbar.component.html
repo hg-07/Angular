@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="/src/assets/images/oacademy.png" alt="" height="36" /> <span style="color:rgb(255, 0, 0); font-size: 2rem;">O</span>penAcademy
+    <a class="navbar-brand" href="home">
+      <img  alt="" height="36" /> <span style="color:rgb(255, 0, 0); font-size: 2rem;">O</span >penAcademy
     </a>
+
+    
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,26 +13,37 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Courses</a>
+          <a class="nav-link" href="courses">Courses</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            NameofUser
-          </a>
+        
+        <li class="nav-item dropdown ">
 
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <a *ngIf="!loggedin" class="nav-link dropdown-toggle {{showclass}}"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" >
+            Login
+          </a>
+          
+          <a *ngIf="loggedin" class="nav-link dropdown-toggle {{showclass}}"  id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">Hareesh</a>
+
+          
+          <ul *ngIf="loggedin" class="dropdown-menu dropdown-menu-end {{showclass}}" aria-labelledby="navbarDropdown" >
             <li><a class="dropdown-item" href="profile">Profile</a></li>
-            <li><a class="dropdown-item" href="#">My courses</a></li>
-            <li><a class="dropdown-item" href="#">Payments</a></li>
+            <li><a class="dropdown-item" href="mycourses">My courses</a></li>
+            <li><a class="dropdown-item" href="payments" >Payments</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" style="background-color: rgb(211, 211, 211)" href="home" (click)="logout()"> Logout </a></li>
           </ul>
+
+
+          <app-login-user *ngIf="!loggedin" (events)="datat($event)" ></app-login-user>
+                  
+          
         </li>
       </ul>
     </div>

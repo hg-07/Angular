@@ -1,0 +1,45 @@
+<div  class="paymenttable ">
+    <span> <h4>
+        Your Payment Details:
+    </h4> </span>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+      
+         
+          <ng-container matColumnDef="courseid">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Course ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.courseid}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="txnid">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Transaction ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.txnid}} </td>
+          </ng-container>
+      
+         
+          <ng-container matColumnDef="billeddate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+            <td mat-cell *matCellDef="let row"> {{row.billeddate}} </td>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="coursetitle" >
+            <th  mat-header-cell *matHeaderCellDef mat-sort-header> Course Title </th>
+            <td  mat-cell *matCellDef="let row"> {{row.coursetitle}} </td>
+          </ng-container>
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+            <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+          </ng-container>
+          <ng-container matColumnDef="paymenttype">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Payment Method </th>
+            <td mat-cell *matCellDef="let row"> {{row.paymenttype}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons >
+    </mat-paginator>
+</div>

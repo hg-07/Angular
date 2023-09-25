@@ -1,0 +1,14 @@
+<div *ngIf="isloading" style="width: 100%;">
+    <app-spinner></app-spinner>
+</div>
+<div class="container my-5">
+    <div class="courselist">
+        <ng-container  #courselist ></ng-container>
+        
+    </div>
+    <div class="showmore">
+        <button type="button" (click)="showMore()" class="btn btn-dark">Show More...</button>
+    </div>
+    
+</div>
+

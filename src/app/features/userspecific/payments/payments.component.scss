@@ -1,0 +1,94 @@
+.mat-table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 5%;
+
+    vertical-align: middle !important;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+.mat-column-courseid {
+    width: 10% !important;
+}
+
+.mat-column-coursetitle {
+    width: 30% !important;
+}
+
+.mat-column-txnid {
+    width: 10% !important;
+}
+
+.mat-column-price {
+    width: 5% !important;
+}
+
+.mat-column-paymenttype {
+    width: 15% !important;
+}
+
+.mat-column-billeddate {
+    width: 15% !important;
+}
+
+h4 {
+    margin: 10px auto;
+    display: table;
+    background-color: black;
+    padding: 5px;
+    color: azure;
+    border-radius: 1rem;
+}
+
+.paymenttable {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+}
+
+mat-paginator {
+    margin-top: 30px;
+}
+
+::ng-deep {
+
+    .cdk-overlay-container,
+    .cdk-global-overlay-wrapper {
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .cdk-overlay-container {
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .cdk-overlay-pane {
+        position: absolute;
+        pointer-events: auto;
+        box-sizing: border-box;
+        z-index: 1000;
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        background-color: white;
+        border: 1px solid rgba(128, 128, 128);
+    }
+}
